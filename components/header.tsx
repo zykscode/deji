@@ -2,10 +2,10 @@ import React from 'react'
 
 type Props = {}
 
-const header = (props: Props) => {
+const Header = (props: Props) => {
   return (
     <div>header</div>
   )
 }
 
-export default header
+export default Header

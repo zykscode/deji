@@ -2,10 +2,10 @@ import React from 'react'
 
 type Props = {}
 
-function footer({}: Props) {
+function Footer({}: Props) {
   return (
     <div>footer</div>
   )
 }
 
-export default footer
+export default Footer
