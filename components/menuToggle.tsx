@@ -1,20 +1,20 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { SVGMotionProps, motion } from "framer-motion";
 
-const Path = props => (
+const Path = (props: React.JSX.IntrinsicAttributes & SVGMotionProps<SVGPathElement> & React.RefAttributes<SVGPathElement>) => (
   <motion.path
     fill="transparent"
-    whileHover={{ scale: 1.2 }}
-    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-    strokeWidth="1.75"
+     strokeWidth="2"
     stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
     {...props}
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
-  <button className=" w-[6rem]  " onClick={toggle}>
+export const MenuToggle = ({ toggle }: any) => (
+  <motion.button  whileHover={{ scale: 1.2 }}
+  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+ className=" w-[6rem]  " onClick={toggle}>
     <svg width="69" height="23" className="w-full" viewBox="0 0 69 23">
       <Path
         variants={{
@@ -30,5 +30,5 @@ export const MenuToggle = ({ toggle }) => (
         }}
       />
     </svg>
-  </button>
+  </motion.button>
 );
