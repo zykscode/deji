@@ -4,7 +4,7 @@ type Props = {}
 
 function Footer({}: Props) {
   return (
-    <div>footer</div>
+    <div className='h-screen font-normal font-atyp  text-5xl'>Selemen</div>
   )
 }
 
