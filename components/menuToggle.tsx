@@ -27,21 +27,21 @@ export const MenuToggle = ({ toggle }: any) => (
       <Path
         variants={{
           closed: { d: 'M 4 2 L 65 2' },
-          open: { d: 'M 4 15 L 65 8' },
+          open: { d: 'M 5 21 L 65 2' },
         }}
       />
 
       <Path
         variants={{
-          closed: {
-            d: 'M 4 11.6 L 65 11.5',
+          open: {
+            d: 'M 4 11.5 L 65 11.5',
             opacity: 0,
-            pathLength: 1,
             transition: { duration: 0.1 },
           },
-          open: {
-            d: 'M 4 15 L 65 8',
+          closed: {
+            d: 'M 4 11.5 L 65 11.5',
             opacity: 1,
+            pathLength: 1,
           },
         }}
       />
@@ -49,7 +49,7 @@ export const MenuToggle = ({ toggle }: any) => (
       <Path
         variants={{
           closed: { d: 'M 5 21 L 65 21' },
-          open: { d: 'M 4 8 L 65 15' },
+          open: { d: 'M 5 2 L 65 21' },
         }}
       />
     </svg>
