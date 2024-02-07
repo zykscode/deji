@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
-
-function Footer({}: Props) {
+function Footer() {
   return (
-    <div className='h-screen font-normal font-atyp  text-5xl'>Selemen</div>
-  )
+    <div className="h-screen font-atyp text-5xl  font-normal">Selemen</div>
+  );
 }
 
-export default Footer
+export default Footer;

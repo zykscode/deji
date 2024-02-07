@@ -1,5 +1,6 @@
 'use client';
 
+/* eslint-disable unused-imports/no-unused-vars */
 import { motion, useCycle } from 'framer-motion';
 import React, { useRef } from 'react';
 
