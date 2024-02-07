@@ -9,7 +9,7 @@ const Path = (
 ) => (
   <motion.path
     fill="transparent"
-    strokeWidth="4"
+    strokeWidth="2.875"
     stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
     {...props}
@@ -19,7 +19,7 @@ const Path = (
 export const MenuToggle = ({ toggle }: any) => (
   <motion.button
     whileHover={{ scale: 1.2 }}
-    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+    transition={{ type: 'spring', stiffness: 500, damping: 10 }}
     className="w-[6rem]"
     onClick={toggle}
   >
