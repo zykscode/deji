@@ -33,11 +33,15 @@ export const MenuToggle = ({ toggle }: any) => (
 
       <Path
         variants={{
-          closed: { d: 'M 4 11.6 L 65 11.5' },
+          closed: {
+            d: 'M 4 11.6 L 65 11.5',
+            opacity: 0,
+            pathLength: 1,
+            transition: { duration: 0.1 },
+          },
           open: {
             d: 'M 4 15 L 65 8',
-            opacity: 0,
-            transition: { duration: 0.1 },
+            opacity: 1,
           },
         }}
       />

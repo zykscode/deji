@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import "#/styles/globals.css";
-import Header from "#/components/header";
-import Footer from "#/components/footer";
-import { Atyp, Suisse } from "#/utils/customFonts";
+import '#/styles/globals.css';
+
+import Footer from '#/components/footer';
+import Header from '#/components/header';
+import { Atyp, Suisse } from '#/utils/customFonts';
 
 export default function RootLayout({
   children,
@@ -11,11 +11,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${Suisse.variable} ${Atyp.variable}`}>
-      <body className={` flex min-h-screen flex-col items-center justify-between p-4 bg-green-400`}>
-        <Header/>
+      <body
+        className={` flex min-h-screen flex-col items-center justify-between bg-green-400 p-4`}
+      >
+        <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
