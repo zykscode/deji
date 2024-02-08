@@ -7,10 +7,11 @@ import React, { useRef } from 'react';
 import { useDimensions } from '#/utils/use-dimensions';
 
 import { MenuToggle } from './menuToggle';
+import { MobileNav } from './mobile-nav';
 
 type Props = {};
 
-const Header = (props: Props) => {
+const Header = ({ children, items }: any) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -28,6 +29,11 @@ const Header = (props: Props) => {
           ref={containerRef}
         >
           <MenuToggle toggle={() => toggleOpen()} />
+          {isOpen && (
+            <MobileNav isOpen items={items!}>
+              {children}
+            </MobileNav>
+          )}
         </motion.nav>
       </div>
     </header>

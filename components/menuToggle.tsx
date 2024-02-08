@@ -36,7 +36,7 @@ export const MenuToggle = ({ toggle }: any) => (
           open: {
             d: 'M 4 11.5 L 65 11.5',
             opacity: 0,
-            transition: { duration: 0.1 },
+            transition: { duration: 0.01 },
           },
           closed: {
             d: 'M 4 11.5 L 65 11.5',

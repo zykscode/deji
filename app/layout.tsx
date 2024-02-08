@@ -2,6 +2,7 @@ import '#/styles/globals.css';
 
 import Footer from '#/components/footer';
 import Header from '#/components/header';
+import { homepageNavs } from '#/config/homepage';
 import { Atyp, Suisse } from '#/utils/customFonts';
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
       <body
         className={` flex min-h-screen flex-col items-center justify-between bg-green-400 p-4`}
       >
-        <Header />
+        <Header items={homepageNavs.mainNav} />
         {children}
         <Footer />
       </body>
