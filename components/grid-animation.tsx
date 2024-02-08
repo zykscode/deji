@@ -7,7 +7,7 @@ type Props = {
 };
 
 const grid = {
-  hidden: (i) => ({
+  hidden: (i: number) => ({
     y: -1000,
     transition: {
       duration: 0.6,
@@ -15,7 +15,7 @@ const grid = {
       delay: i * 0.2,
     },
   }),
-  show: (i) => ({
+  show: (i: number) => ({
     y: 0,
     transition: {
       duration: 0.6,
@@ -25,7 +25,7 @@ const grid = {
   }),
 };
 
-const Grid = ({ i}: Props) => {
+const Grid = ({ i }: Props) => {
   return (
     <motion.div
       variants={{ hidden: grid.hidden(i), show: grid.show(i) }}
