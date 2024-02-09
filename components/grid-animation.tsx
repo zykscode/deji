@@ -7,7 +7,7 @@ type Props = {
 };
 
 const grid = {
-  hidden: (i: number) => ({
+  close: (i: number) => ({
     y: -1000,
     transition: {
       duration: 0.6,
@@ -15,10 +15,10 @@ const grid = {
       delay: i * 0.2,
     },
   }),
-  show: (i: number) => ({
+  open: (i: number) => ({
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 2,
       type: 'ease-in',
       delay: i * 0.2,
     },
@@ -28,8 +28,8 @@ const grid = {
 const Grid = ({ i }: Props) => {
   return (
     <motion.div
-      variants={{ hidden: grid.hidden(i), show: grid.show(i) }}
-      className="h-screen bg-yellow-300 p-1"
+      variants={{ close: grid.close(i), open: grid.open(i) }}
+      className="h-screen bg-yellow-500 p-10"
     />
   );
 };

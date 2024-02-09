@@ -18,27 +18,27 @@ interface MobileNavProps {
 }
 
 const mobileCard = {
-  hidden: {
+  close: {
     transition: {
       duration: 0.6,
     },
   },
-  show: {
+  open: {
     transition: {
       duration: 0.6,
     },
   },
 };
 const mobileTab = {
-  hidden: {
+  close: {
     opacity: 0,
     scale: [1, 0],
     transition: {
-      duration: 0.6,
+      duration: 3,
       type: 'ease-in',
     },
   },
-  show: {
+  open: {
     y: [150, 0],
     opacity: [0, 1],
     transition: {
@@ -59,7 +59,7 @@ export function MobileNav({ items, isOpen, children }: MobileNavProps) {
         variants={mobileCard}
         className={`absolute inset-0 -z-20 grid grid-cols-4 ${
           isOpen ? 'bg-secondaryFg  backdrop-blur-sm ' : '4 inset-0 scale-0'
-        } md:hidden `}
+        } `}
       >
         <div className="absolute inset-0 z-20 grid  h-screen grid-cols-4">
           {gridItems.map((i) => {
@@ -69,7 +69,7 @@ export function MobileNav({ items, isOpen, children }: MobileNavProps) {
       </motion.div>
       <motion.div
         className={cn(
-          'fixed inset-0 z-30 top-16 bg-yellow-400 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md  md:hidden ',
+          'fixed inset-0 z-30 top-16 bg-yellow-400 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md ',
         )}
         variants={mobileTab}
       >

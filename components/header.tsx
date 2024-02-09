@@ -29,6 +29,7 @@ const Header = ({ children, items }: any) => {
           ref={containerRef}
         >
           <MenuToggle toggle={() => toggleOpen()} />
+
           {isOpen && (
             <MobileNav isOpen items={items!}>
               {children}
