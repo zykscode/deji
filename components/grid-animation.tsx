@@ -29,7 +29,7 @@ const Grid = ({ i }: Props) => {
   return (
     <motion.div
       variants={{ close: grid.close(i), open: grid.open(i) }}
-      className="h-screen bg-yellow-500 p-10"
+      className="h-screen bg-purple-500 p-10"
     />
   );
 };

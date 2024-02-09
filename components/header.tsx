@@ -1,7 +1,7 @@
 'use client';
 
 /* eslint-disable unused-imports/no-unused-vars */
-import { AnimatePresence, motion, useCycle } from 'framer-motion';
+import { motion, useCycle } from 'framer-motion';
 import React, { useRef } from 'react';
 
 import { useDimensions } from '#/utils/use-dimensions';
@@ -14,7 +14,6 @@ const container = {
     transition: {
       when: 'afterChildren',
       staggerDirection: -1,
-      delay: 2,
     },
   },
   open: {
@@ -32,7 +31,7 @@ const Header = ({ children, items }: any) => {
   return (
     <header className="sticky top-0 flex h-[5rem] w-full  place-items-center justify-between bg-transparent/10 backdrop-blur-sm md:flex-row-reverse">
       <div className="hidden md:flex">socials</div>
-      <div className=" bg-yellow-200 font-atyp text-[1.75rem] font-bold md:text-[3rem] ">
+      <div className=" bg-gray-200 font-atyp text-[1.75rem] font-bold md:text-[3rem] ">
         Damcom
       </div>
       <div className=" font-atyp text-2xl font-thin">
@@ -45,13 +44,9 @@ const Header = ({ children, items }: any) => {
         >
           <MenuToggle toggle={() => toggleOpen()} />
 
-          <AnimatePresence>
-            {isOpen && (
-              <MobileNav isOpen items={items!}>
-                {children}
-              </MobileNav>
-            )}
-          </AnimatePresence>
+          <MobileNav isOpen items={items!}>
+            {children}
+          </MobileNav>
         </motion.nav>
       </div>
     </header>

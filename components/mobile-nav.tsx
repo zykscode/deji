@@ -31,11 +31,10 @@ const mobileCard = {
 };
 const mobileTab = {
   close: {
-    opacity: 0,
-    scale: [1, 0],
     transition: {
       duration: 0.6,
       type: 'ease-in',
+      delay:  1,
     },
   },
   open: {
@@ -57,8 +56,8 @@ export function MobileNav({ items, isOpen, children }: MobileNavProps) {
     <>
       <motion.div
         variants={mobileCard}
-        className={`absolute inset-0 -z-20 grid grid-cols-4 ${
-          isOpen ? 'bg-secondaryFg  backdrop-blur-sm ' : '4 inset-0 scale-0'
+        className={`absolute inset-0 -z-20 grid grid-cols-4 bg-pink-500 ${
+          isOpen ? ' backdrop-blur-sm ' : '4 inset-0 scale-0'
         } `}
       >
         <div className="absolute inset-0 z-20 grid  h-screen grid-cols-4">
