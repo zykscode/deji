@@ -18,7 +18,7 @@ const grid = {
   open: (i: number) => ({
     y: 0,
     transition: {
-      duration: 2,
+      duration: 0.6,
       type: 'ease-in',
       delay: i * 0.2,
     },
