@@ -34,7 +34,7 @@ const mobileTab = {
     transition: {
       duration: 0.6,
       type: 'ease-in',
-      delay:  1,
+      delay: 1,
     },
   },
   open: {
