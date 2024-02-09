@@ -26,7 +26,7 @@ export const MenuToggle = ({ toggle }: any) => (
     <svg width="69" height="23" className="w-full" viewBox="0 0 69 23">
       <Path
         variants={{
-          closed: { d: 'M 4 2 L 65 2' },
+          close: { d: 'M 4 2 L 65 2' },
           open: { d: 'M 5 21 L 65 2' },
         }}
       />
@@ -38,7 +38,7 @@ export const MenuToggle = ({ toggle }: any) => (
             opacity: 0,
             transition: { duration: 0.01 },
           },
-          closed: {
+          close: {
             d: 'M 4 11.5 L 65 11.5',
             opacity: 1,
             pathLength: 1,
@@ -48,7 +48,7 @@ export const MenuToggle = ({ toggle }: any) => (
 
       <Path
         variants={{
-          closed: { d: 'M 5 21 L 65 21' },
+          close: { d: 'M 5 21 L 65 21' },
           open: { d: 'M 5 2 L 65 21' },
         }}
       />
