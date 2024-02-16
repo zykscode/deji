@@ -7,12 +7,12 @@ type Props = {
 };
 
 const grid = {
-  close: (i: number) => ({
+  close: (_i: number) => ({
     y: -1000,
     transition: {
       duration: 0.6,
-      ease: 'linear',
-      delay: i * 0.2,
+      type: 'ease-in',
+      delay: 0.6 + _i * 0.2,
     },
   }),
   open: (i: number) => ({

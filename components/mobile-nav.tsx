@@ -31,14 +31,15 @@ const mobileCard = {
 };
 const mobileTab = {
   close: {
+    opacity: [1, 0],
+    y: [0, 100],
     transition: {
       duration: 0.6,
       type: 'ease-in',
-      delay: 1,
     },
   },
   open: {
-    y: [150, 0],
+    y: [50, 0],
     opacity: [0, 1],
     transition: {
       type: 'ease-in',
@@ -72,7 +73,11 @@ export function MobileNav({ items, isOpen, children }: MobileNavProps) {
         )}
         variants={mobileTab}
       >
-        <div className="text-primaryFg relative z-20 grid gap-6 rounded-md bg-green-500 p-4 shadow-xl">
+        <div
+          className={`text-primaryFg relative z-20 ${
+            isOpen ? 'grid' : 'hidden'
+          } gap-6 rounded-md bg-green-500 p-4 shadow-xl`}
+        >
           <Link href="/" passHref className="flex items-center space-x-2">
             DAmcom
             <span className="font-bold">{siteConfig.name}</span>

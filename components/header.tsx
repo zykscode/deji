@@ -29,7 +29,11 @@ const Header = ({ children, items }: any) => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (
-    <header className="sticky top-0 flex h-[5rem] w-full  place-items-center justify-between bg-transparent/10 backdrop-blur-sm md:flex-row-reverse">
+    <header
+      className={`sticky top-0 flex h-[5rem] w-full  place-items-center justify-between bg-transparent/10 backdrop-blur-sm md:flex-row-reverse ${
+        isOpen ? 'absolute' : ''
+      }`}
+    >
       <div className="hidden md:flex">socials</div>
       <div className=" bg-gray-200 font-atyp text-[1.75rem] font-bold md:text-[3rem] ">
         Damcom
