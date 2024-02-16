@@ -12,7 +12,7 @@ const grid = {
     transition: {
       duration: 0.6,
       type: 'ease-in',
-      delay: 0.6 + _i * 0.2,
+      delay: 1.2 - _i * 0.2,
     },
   }),
   open: (i: number) => ({
