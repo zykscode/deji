@@ -57,9 +57,7 @@ export function MobileNav({ items, isOpen, children }: MobileNavProps) {
     <>
       <motion.div
         variants={mobileCard}
-        className={`absolute inset-0 -z-20 grid grid-cols-4 bg-pink-500 ${
-          isOpen ? ' backdrop-blur-sm ' : '4 inset-0 scale-0'
-        } `}
+        className={`absolute inset-0 -z-20 grid grid-cols-4 bg-pink-500  backdrop-blur-sm `}
       >
         <div className="absolute inset-0 z-20 grid  h-screen grid-cols-4">
           {gridItems.map((i) => {

@@ -48,7 +48,7 @@ const Header = ({ children, items }: any) => {
         >
           <MenuToggle toggle={() => toggleOpen()} />
 
-          <MobileNav isOpen items={items!}>
+          <MobileNav isOpen={isOpen} items={items!}>
             {children}
           </MobileNav>
         </motion.nav>
